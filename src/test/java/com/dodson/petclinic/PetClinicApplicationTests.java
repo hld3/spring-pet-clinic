@@ -1,10 +1,10 @@
-package com.dodson.petclinictest;
+package com.dodson.petclinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PetClinicTestApplicationTests {
+class PetClinicApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.dodson.petclinictest;
+package com.dodson.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PetClinicTestApplication {
+public class PetClinicApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PetClinicTestApplication.class, args);
+		SpringApplication.run(PetClinicApplication.class, args);
 	}
 
 }
