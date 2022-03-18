@@ -6,20 +6,24 @@
     </head>
 
     <body>
-        <h2 th:text="'List of pet owners'">Missing Text</h2>
+        <h2></h2>Owner Information</h2>
         <table id="owners" class="table table-striped">
             <thead>
                 <tr>
                     <th style="width: 50px;">Id</th>
-                    <th style="width: 150px;">First Name</th>
-                    <th style="width: 150px;">Last Name</th>
+                    <th style="width: 150px;">Name</th>
+                    <th style="width: 150px;">Address</th>
+                    <th style="width: 150px;">City</th>
+                    <th style="width: 150px;">Telephone</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="owner: ${owners}">
                     <td th:text="${owner.id}">1</td>
-                    <td th:text="${owner.firstName}">Joe</td>
-                    <td th:text="${owner.lastName}">Buck</td>
+                    <td th:text="${owner.firstName} + ' ' + ${owner.lastName}">Joe</td>
+                    <td th:text="${owner.address}">Buck</td>
+                    <td th:text="${owner.city}">Buck</td>
+                    <td th:text="${owner.telephone}">Buck</td>
                 </tr>
             </tbody>
         </table>
