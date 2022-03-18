@@ -1,9 +1,12 @@
 package com.dodson.petclinic.bootStrap;
 
 import com.dodson.petclinic.model.Owner;
+import com.dodson.petclinic.model.PetType;
 import com.dodson.petclinic.model.Vet;
 import com.dodson.petclinic.services.OwnerService;
+import com.dodson.petclinic.services.PetTypeService;
 import com.dodson.petclinic.services.VetService;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -12,10 +15,12 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
@@ -48,5 +53,13 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet2);
 
         System.out.println("Loaded Vets.............");
+
+        PetType dog = new PetType("Dog");
+        PetType dogSavedPetType = petTypeService.save(dog);
+
+        PetType cat = new PetType("Cat");
+        PetType catSavedPetType = petTypeService.save(cat);
+
+        System.out.println("Loaded Pet Types.............");
     }
 }
