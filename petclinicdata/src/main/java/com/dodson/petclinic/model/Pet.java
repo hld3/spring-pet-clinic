@@ -2,11 +2,24 @@ package com.dodson.petclinic.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "pet")
 public class Pet extends BaseEntity {
     
     private String name;
     private LocalDate birthDate;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType PetType;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
 
     public String getName() {

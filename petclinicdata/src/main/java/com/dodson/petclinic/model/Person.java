@@ -1,7 +1,12 @@
 package com.dodson.petclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public class Person extends BaseEntity {
     
+    @Column(name = "first_name") // redundant, just showing annotation.
     private String firstName;
     private String lastName;
 

@@ -1,5 +1,10 @@
 package com.dodson.petclinic.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "type")
 public class PetType extends BaseEntity {
 
     private String name;
