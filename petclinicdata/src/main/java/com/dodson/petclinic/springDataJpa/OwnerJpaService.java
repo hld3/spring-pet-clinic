@@ -5,8 +5,6 @@ import java.util.Set;
 
 import com.dodson.petclinic.model.Owner;
 import com.dodson.petclinic.repositories.OwnerRepository;
-import com.dodson.petclinic.repositories.PetRepository;
-import com.dodson.petclinic.repositories.PetTypeRepository;
 import com.dodson.petclinic.services.OwnerService;
 
 import org.springframework.context.annotation.Profile;
@@ -17,13 +15,9 @@ import org.springframework.stereotype.Service;
 public class OwnerJpaService implements OwnerService {
 
     private final OwnerRepository ownerRepository;
-    private final PetRepository petRepository;
-    private final PetTypeRepository petTypeRepository;
 
-    public OwnerJpaService(OwnerRepository ownerRepository, PetRepository petRepository, PetTypeRepository petTypeRepository) {
+    public OwnerJpaService(OwnerRepository ownerRepository) {
         this.ownerRepository = ownerRepository;
-        this.petRepository = petRepository;
-        this.petTypeRepository = petTypeRepository;
     }
 
     @Override
