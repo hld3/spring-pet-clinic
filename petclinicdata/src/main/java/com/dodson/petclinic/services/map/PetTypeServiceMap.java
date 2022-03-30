@@ -8,7 +8,7 @@ import com.dodson.petclinic.services.PetTypeService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
+public class PetTypeServiceMap extends AbstractServiceMap<PetType, Long> implements PetTypeService {
     
     @Override
     public void delete(PetType petType) {

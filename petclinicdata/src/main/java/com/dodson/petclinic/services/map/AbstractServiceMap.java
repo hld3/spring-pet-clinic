@@ -8,7 +8,7 @@ import java.util.Set;
 
 import com.dodson.petclinic.model.BaseEntity;
 
-public abstract class AbstractMapService<T extends BaseEntity, ID extends Number> {
+public abstract class AbstractServiceMap<T extends BaseEntity, ID extends Number> {
     
     protected Map<Long, T> map = new HashMap<>();
 

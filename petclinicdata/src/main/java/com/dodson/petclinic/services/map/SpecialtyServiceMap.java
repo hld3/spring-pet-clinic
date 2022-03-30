@@ -8,7 +8,7 @@ import com.dodson.petclinic.services.SpecialtyService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SpecialtyServiceMap extends AbstractMapService<Specialty, Long> implements SpecialtyService {
+public class SpecialtyServiceMap extends AbstractServiceMap<Specialty, Long> implements SpecialtyService {
 
     @Override
     public void delete(Specialty object) {
