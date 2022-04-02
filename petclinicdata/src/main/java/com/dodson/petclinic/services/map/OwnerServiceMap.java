@@ -8,9 +8,11 @@ import com.dodson.petclinic.services.OwnerService;
 import com.dodson.petclinic.services.PetService;
 import com.dodson.petclinic.services.PetTypeService;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerServiceMap extends AbstractServiceMap<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;

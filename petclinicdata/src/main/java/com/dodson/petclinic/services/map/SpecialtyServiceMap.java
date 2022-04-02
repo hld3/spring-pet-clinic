@@ -5,9 +5,11 @@ import java.util.Set;
 import com.dodson.petclinic.model.Specialty;
 import com.dodson.petclinic.services.SpecialtyService;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialtyServiceMap extends AbstractServiceMap<Specialty, Long> implements SpecialtyService {
 
     @Override
