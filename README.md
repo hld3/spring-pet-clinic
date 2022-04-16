@@ -1,1 +1,1 @@
-[![CircleCI](https://circleci.com/gh/hld3/spring-pet-clinic/tree/main.svg?style=svg)](https://circleci.com/gh/hld3/spring-pet-clinic/tree/main)
+[![CircleCI](https://circleci.com/gh/hld3/spring-pet-clinic/tree/main.svg?style=svg&circle-token=612375e493dc01afd8773eb05e4abbe519179805)](https://circleci.com/gh/hld3/spring-pet-clinic/tree/main)
