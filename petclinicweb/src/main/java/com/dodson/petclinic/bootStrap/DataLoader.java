@@ -101,6 +101,22 @@ private void loadData() {
 
         ownerService.save(owner2);
 
+        Owner owner3 = new Owner();
+        owner3.setFirstName("Tom");
+        owner3.setLastName("WestLike");
+        owner3.setAddress("121 Another St");
+        owner3.setCity("Kinda Big City");
+        owner3.setTelephone("321-123-1234");
+
+        Pet owner3Pet1 = new Pet();
+        owner3Pet1.setName("Posco");
+        owner3Pet1.setOwner(owner3);
+        owner3Pet1.setPetType(dogSavedPetType);
+        owner3Pet1.setBirthDate(LocalDate.now());
+        owner3.getPets().add(owner3Pet1);
+
+        ownerService.save(owner3);
+
         Visit catVisit = new Visit();
         catVisit.setPet(fionnaCat);
         catVisit.setDate(LocalDate.now());

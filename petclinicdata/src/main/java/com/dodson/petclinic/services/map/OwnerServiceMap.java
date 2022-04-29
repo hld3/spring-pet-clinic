@@ -1,5 +1,6 @@
 package com.dodson.petclinic.services.map;
 
+import java.util.List;
 import java.util.Set;
 
 import com.dodson.petclinic.model.Owner;
@@ -76,5 +77,11 @@ public class OwnerServiceMap extends AbstractServiceMap<Owner, Long> implements 
             .filter(o -> o.getLastName().equalsIgnoreCase(lastName))
             .findFirst()
             .orElse(null);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

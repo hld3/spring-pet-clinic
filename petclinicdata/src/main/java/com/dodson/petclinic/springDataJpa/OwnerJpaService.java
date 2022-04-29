@@ -1,6 +1,7 @@
 package com.dodson.petclinic.springDataJpa;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import com.dodson.petclinic.model.Owner;
@@ -52,4 +53,8 @@ public class OwnerJpaService implements OwnerService {
         return ownerRepository.findByLastName(lastName);
     }
 
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        return ownerRepository.findAllByLastNameLike(lastName);
+    }
 }
