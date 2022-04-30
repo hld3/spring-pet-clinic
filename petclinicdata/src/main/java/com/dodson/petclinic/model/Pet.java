@@ -11,7 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,12 +19,21 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "pet")
 public class Pet extends BaseEntity {
     
+    @Builder
+    public Pet(Long id, String name, LocalDate birthDate, PetType PetType, Owner owner, Set<Visit> visits) {
+        super(id);
+        this.name = name;
+        this.birthDate = birthDate;
+        this.PetType = PetType;
+        this.owner = owner;
+        this.visits = visits;
+    }
+
+
     private String name;
     private LocalDate birthDate;
 
