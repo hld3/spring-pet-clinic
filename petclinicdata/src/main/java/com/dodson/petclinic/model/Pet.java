@@ -24,13 +24,15 @@ import lombok.Setter;
 public class Pet extends BaseEntity {
     
     @Builder
-    public Pet(Long id, String name, LocalDate birthDate, PetType PetType, Owner owner, Set<Visit> visits) {
+    public Pet(Long id, String name, LocalDate birthDate, PetType petType, Owner owner, Set<Visit> visits) {
         super(id);
         this.name = name;
         this.birthDate = birthDate;
-        this.PetType = PetType;
+        this.petType = petType;
         this.owner = owner;
-        this.visits = visits;
+        if (visits != null) {
+            this.visits = visits;
+        }
     }
 
     private String name;
@@ -38,7 +40,7 @@ public class Pet extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "type_id")
-    private PetType PetType;
+    private PetType petType;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
