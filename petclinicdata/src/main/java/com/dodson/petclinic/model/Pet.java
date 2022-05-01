@@ -33,7 +33,6 @@ public class Pet extends BaseEntity {
         this.visits = visits;
     }
 
-
     private String name;
     private LocalDate birthDate;
 
